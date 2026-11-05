@@ -1,0 +1,5 @@
+/bin/
+/release/
+Lucy-*.zip
+*.pdb
+*.rsp
