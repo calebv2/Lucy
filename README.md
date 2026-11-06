@@ -12,6 +12,16 @@ The server creates `UserData/LucyWeekly/settings.json` with the fields shown in 
 
 Check the startup log for `LUCY_START version=0.2.4`, `LUCY_WEAPON_REGISTERED`, and `LUCY_WEEK_READY`. `LUCY_WEEK_PLANNED` reports the selected layer; `LUCY_WEEK_SPAWNED` reports placement. A server that is offline for a week does not create a missed sword on return.
 
+## Manual spawn (admin)
+
+After Lucy has registered on the server and client, enter this in the server console or Dashboard command runner:
+
+```text
+spawn "<ATT username>" LucySword
+```
+
+Replace `<ATT username>` with the online player's name. The registered prefab is `LucySword`; `LucyBlade` and `LucyMould` are inactive legacy identifiers. A manually spawned sword does not use the week's mine allocation.
+
 ## Build
 
 The repository contains the mod source and its required graphics bundle. It does not include A Township Tale, Unity, MelonLoader, or SyncLib binaries. Build on Windows with the installed game, SyncLib in its `Mods` folder, and Unity 2020.3.23f1:
